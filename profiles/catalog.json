@@ -1,0 +1,411 @@
+{
+  "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+  "profiles": [
+    {
+      "id": "hd650",
+      "name": "Sennheiser HD650",
+      "source": "Rtings · HMS II.3",
+      "path": "results/Rtings/HMS II.3 over-ear/Sennheiser HD 650/Sennheiser HD 650 ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings. La respuesta cambia con las almohadillas, el ajuste y cada unidad."
+    },
+    {
+      "id": "edition-xs",
+      "name": "HIFIMAN Edition XS",
+      "source": "Rtings · Brüel & Kjær 5128",
+      "path": "results/Rtings/Bruel & Kjaer 5128 over-ear/HIFIMAN Edition XS/HIFIMAN Edition XS ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings 5128. Revisa graves y agudos según el sellado y tu preferencia."
+    },
+    {
+      "id": "pxc550",
+      "name": "Sennheiser PXC 550 · inalámbrico, ANC activo",
+      "source": "Innerfidelity · wireless, ANC on",
+      "path": "results/Innerfidelity/over-ear/Sennheiser PXC 550 Wireless (wireless, ANC on)/Sennheiser PXC 550 Wireless (wireless, ANC on) ParametricEQ.txt",
+      "description": "Perfil AutoEq de la medición inalámbrica con ANC activo. Usa ese modo y desactiva otros efectos del audífono."
+    },
+    {
+      "id": "pxc550-ii",
+      "name": "Sennheiser PXC 550-II Wireless",
+      "source": "Rtings · HMS II.3",
+      "path": "results/Rtings/HMS II.3 over-ear/Sennheiser PXC 550-II Wireless/Sennheiser PXC 550-II Wireless ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de la medición Rtings del modelo II. El modo ANC, el sellado y los efectos internos cambian el resultado."
+    },
+    {
+      "id": "sennheiser-hd600",
+      "name": "Sennheiser HD 600",
+      "source": "Rtings · Brüel & Kjær 5128",
+      "path": "results/Rtings/Bruel & Kjaer 5128 over-ear/Sennheiser HD 600/Sennheiser HD 600 ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings · Brüel & Kjær 5128. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "sennheiser-hd560s",
+      "name": "Sennheiser HD 560S",
+      "source": "Rtings · Brüel & Kjær 5128",
+      "path": "results/Rtings/Bruel & Kjaer 5128 over-ear/Sennheiser HD 560S/Sennheiser HD 560S ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings · Brüel & Kjær 5128. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "sennheiser-hd660s2",
+      "name": "Sennheiser HD 660S2",
+      "source": "Rtings · HMS II.3",
+      "path": "results/Rtings/HMS II.3 over-ear/Sennheiser HD 660S2/Sennheiser HD 660S2 ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings · HMS II.3. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "sennheiser-hd800s",
+      "name": "Sennheiser HD 800 S",
+      "source": "Rtings · Brüel & Kjær 5128",
+      "path": "results/Rtings/Bruel & Kjaer 5128 over-ear/Sennheiser HD 800 S/Sennheiser HD 800 S ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings · Brüel & Kjær 5128. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "sennheiser-momentum4",
+      "name": "Sennheiser Momentum 4 Wireless",
+      "source": "Rtings · Brüel & Kjær 5128",
+      "path": "results/Rtings/Bruel & Kjaer 5128 over-ear/Sennheiser Momentum 4 Wireless/Sennheiser Momentum 4 Wireless ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings · Brüel & Kjær 5128. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "sony-wh1000xm4",
+      "name": "Sony WH-1000XM4",
+      "source": "Rtings · Brüel & Kjær 5128",
+      "path": "results/Rtings/Bruel & Kjaer 5128 over-ear/Sony WH-1000XM4/Sony WH-1000XM4 ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings · Brüel & Kjær 5128. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "sony-wh1000xm5",
+      "name": "Sony WH-1000XM5",
+      "source": "Rtings · Brüel & Kjær 5128",
+      "path": "results/Rtings/Bruel & Kjaer 5128 over-ear/Sony WH-1000XM5/Sony WH-1000XM5 ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings · Brüel & Kjær 5128. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "sony-whch720n",
+      "name": "Sony WH-CH720N",
+      "source": "Rtings · Brüel & Kjær 5128",
+      "path": "results/Rtings/Bruel & Kjaer 5128 over-ear/Sony WH-CH720N/Sony WH-CH720N ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings · Brüel & Kjær 5128. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "sony-mdr7506",
+      "name": "Sony MDR-7506",
+      "source": "Rtings · HMS II.3",
+      "path": "results/Rtings/HMS II.3 over-ear/Sony MDR-7506/Sony MDR-7506 ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings · HMS II.3. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "bose-qc35-ii",
+      "name": "Bose QuietComfort 35 II",
+      "source": "Rtings · HMS II.3",
+      "path": "results/Rtings/HMS II.3 over-ear/Bose QuietComfort 35 II/Bose QuietComfort 35 II ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings · HMS II.3. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "bose-qc45",
+      "name": "Bose QuietComfort 45",
+      "source": "Rtings · Brüel & Kjær 5128",
+      "path": "results/Rtings/Bruel & Kjaer 5128 over-ear/Bose QuietComfort 45/Bose QuietComfort 45 ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings · Brüel & Kjær 5128. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "bose-qc-ultra",
+      "name": "Bose QuietComfort Ultra Headphones",
+      "source": "Rtings · Brüel & Kjær 5128",
+      "path": "results/Rtings/Bruel & Kjaer 5128 over-ear/Bose QuietComfort Ultra Headphones/Bose QuietComfort Ultra Headphones ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings · Brüel & Kjær 5128. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "apple-airpods-max",
+      "name": "Apple AirPods Max",
+      "source": "Rtings · Brüel & Kjær 5128",
+      "path": "results/Rtings/Bruel & Kjaer 5128 over-ear/Apple AirPods Max/Apple AirPods Max ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings · Brüel & Kjær 5128. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "audio-technica-m40x",
+      "name": "Audio-Technica ATH-M40x",
+      "source": "Rtings · HMS II.3",
+      "path": "results/Rtings/HMS II.3 over-ear/Audio-Technica ATH-M40x/Audio-Technica ATH-M40x ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings · HMS II.3. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "audio-technica-m50x",
+      "name": "Audio-Technica ATH-M50x",
+      "source": "Rtings · Brüel & Kjær 5128",
+      "path": "results/Rtings/Bruel & Kjaer 5128 over-ear/Audio-Technica ATH-M50x/Audio-Technica ATH-M50x ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings · Brüel & Kjær 5128. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "audio-technica-r70x",
+      "name": "Audio-Technica ATH-R70x",
+      "source": "Rtings · HMS II.3",
+      "path": "results/Rtings/HMS II.3 over-ear/Audio-Technica ATH-R70x/Audio-Technica ATH-R70x ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings · HMS II.3. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "beyerdynamic-dt770-pro",
+      "name": "Beyerdynamic DT 770 Pro",
+      "source": "Rtings · Brüel & Kjær 5128",
+      "path": "results/Rtings/Bruel & Kjaer 5128 over-ear/Beyerdynamic DT 770 Pro/Beyerdynamic DT 770 Pro ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings · Brüel & Kjær 5128. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "beyerdynamic-dt990-pro",
+      "name": "Beyerdynamic DT 990 Pro",
+      "source": "Rtings · Brüel & Kjær 5128",
+      "path": "results/Rtings/Bruel & Kjaer 5128 over-ear/Beyerdynamic DT 990 Pro/Beyerdynamic DT 990 Pro ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings · Brüel & Kjær 5128. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "beyerdynamic-dt700-pro-x",
+      "name": "Beyerdynamic DT 700 Pro X",
+      "source": "Rtings · HMS II.3",
+      "path": "results/Rtings/HMS II.3 over-ear/Beyerdynamic DT 700 Pro X/Beyerdynamic DT 700 Pro X ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings · HMS II.3. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "beyerdynamic-dt900-pro-x",
+      "name": "Beyerdynamic DT 900 Pro X",
+      "source": "Rtings · HMS II.3",
+      "path": "results/Rtings/HMS II.3 over-ear/Beyerdynamic DT 900 Pro X/Beyerdynamic DT 900 Pro X ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings · HMS II.3. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "akg-k371",
+      "name": "AKG K371",
+      "source": "Rtings · HMS II.3",
+      "path": "results/Rtings/HMS II.3 over-ear/AKG K371/AKG K371 ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings · HMS II.3. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "akg-k702",
+      "name": "AKG K702",
+      "source": "Rtings · HMS II.3",
+      "path": "results/Rtings/HMS II.3 over-ear/AKG K702/AKG K702 ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings · HMS II.3. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "hifiman-sundara-2020",
+      "name": "HIFIMAN Sundara (post-2020 earpads)",
+      "source": "Rtings · Brüel & Kjær 5128",
+      "path": "results/Rtings/Bruel & Kjaer 5128 over-ear/HIFIMAN Sundara (post-2020 earpads)/HIFIMAN Sundara (post-2020 earpads) ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings · Brüel & Kjær 5128. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "hifiman-he400se",
+      "name": "HIFIMAN HE400se",
+      "source": "Rtings · HMS II.3",
+      "path": "results/Rtings/HMS II.3 over-ear/HIFIMAN HE400se/HIFIMAN HE400se ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings · HMS II.3. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "hifiman-arya-stealth",
+      "name": "HIFIMAN Arya Stealth Magnet Version",
+      "source": "Rtings · Brüel & Kjær 5128",
+      "path": "results/Rtings/Bruel & Kjaer 5128 over-ear/HIFIMAN Arya Stealth Magnet Version/HIFIMAN Arya Stealth Magnet Version ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings · Brüel & Kjær 5128. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "focal-bathys",
+      "name": "Focal Bathys",
+      "source": "Rtings · Brüel & Kjær 5128",
+      "path": "results/Rtings/Bruel & Kjaer 5128 over-ear/Focal Bathys/Focal Bathys ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings · Brüel & Kjær 5128. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "focal-clear",
+      "name": "Focal Clear",
+      "source": "oratory1990 · over-ear",
+      "path": "results/oratory1990/over-ear/Focal Clear/Focal Clear ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones oratory1990 · over-ear. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "meze-99-classics",
+      "name": "Meze 99 Classics",
+      "source": "oratory1990 · over-ear",
+      "path": "results/oratory1990/over-ear/Meze 99 Classics/Meze 99 Classics ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones oratory1990 · over-ear. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "meze-109-pro",
+      "name": "Meze 109 Pro",
+      "source": "oratory1990 · over-ear",
+      "path": "results/oratory1990/over-ear/Meze 109 Pro/Meze 109 Pro ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones oratory1990 · over-ear. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "audeze-maxwell",
+      "name": "Audeze Maxwell",
+      "source": "Rtings · Brüel & Kjær 5128",
+      "path": "results/Rtings/Bruel & Kjaer 5128 over-ear/Audeze Maxwell/Audeze Maxwell ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings · Brüel & Kjær 5128. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "audeze-lcd-x-2021",
+      "name": "Audeze LCD-X (2021)",
+      "source": "oratory1990 · over-ear",
+      "path": "results/oratory1990/over-ear/Audeze LCD-X (2021)/Audeze LCD-X (2021) ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones oratory1990 · over-ear. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "philips-fidelio-x2hr",
+      "name": "Philips Fidelio X2HR",
+      "source": "Rtings · Brüel & Kjær 5128",
+      "path": "results/Rtings/Bruel & Kjaer 5128 over-ear/Philips Fidelio X2HR/Philips Fidelio X2HR ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings · Brüel & Kjær 5128. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "shure-srh840a",
+      "name": "Shure SRH840A",
+      "source": "oratory1990 · over-ear",
+      "path": "results/oratory1990/over-ear/Shure SRH840A/Shure SRH840A ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones oratory1990 · over-ear. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "apple-airpods-pro2",
+      "name": "Apple AirPods Pro2",
+      "source": "Rtings · Brüel & Kjær 5128",
+      "path": "results/Rtings/Bruel & Kjaer 5128 in-ear/Apple AirPods Pro2/Apple AirPods Pro2 ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings · Brüel & Kjær 5128. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "samsung-galaxy-buds2-pro",
+      "name": "Samsung Galaxy Buds2 Pro",
+      "source": "Rtings · Brüel & Kjær 5128",
+      "path": "results/Rtings/Bruel & Kjaer 5128 in-ear/Samsung Galaxy Buds2 Pro/Samsung Galaxy Buds2 Pro ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings · Brüel & Kjær 5128. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "samsung-galaxy-buds3-pro",
+      "name": "Samsung Galaxy Buds3 Pro",
+      "source": "Rtings · Brüel & Kjær 5128",
+      "path": "results/Rtings/Bruel & Kjaer 5128 in-ear/Samsung Galaxy Buds3 Pro/Samsung Galaxy Buds3 Pro ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings · Brüel & Kjær 5128. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "sony-wf1000xm5",
+      "name": "Sony WF-1000XM5",
+      "source": "Rtings · Brüel & Kjær 5128",
+      "path": "results/Rtings/Bruel & Kjaer 5128 in-ear/Sony WF-1000XM5/Sony WF-1000XM5 ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings · Brüel & Kjær 5128. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "bose-qc-ultra-earbuds",
+      "name": "Bose QuietComfort Ultra Earbuds",
+      "source": "Rtings · Brüel & Kjær 5128",
+      "path": "results/Rtings/Bruel & Kjaer 5128 in-ear/Bose QuietComfort Ultra Earbuds/Bose QuietComfort Ultra Earbuds ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings · Brüel & Kjær 5128. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "sennheiser-ie200",
+      "name": "Sennheiser IE 200",
+      "source": "Rtings · Brüel & Kjær 5128",
+      "path": "results/Rtings/Bruel & Kjaer 5128 in-ear/Sennheiser IE 200/Sennheiser IE 200 ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings · Brüel & Kjær 5128. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "sennheiser-ie600",
+      "name": "Sennheiser IE 600",
+      "source": "oratory1990 · in-ear",
+      "path": "results/oratory1990/in-ear/Sennheiser IE 600/Sennheiser IE 600 ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones oratory1990 · in-ear. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "sennheiser-momentum-tw4",
+      "name": "Sennheiser MOMENTUM True Wireless 4",
+      "source": "Rtings · Brüel & Kjær 5128",
+      "path": "results/Rtings/Bruel & Kjaer 5128 in-ear/Sennheiser MOMENTUM True Wireless 4/Sennheiser MOMENTUM True Wireless 4 ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings · Brüel & Kjær 5128. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "anker-liberty4-nc",
+      "name": "Anker Soundcore Liberty 4 NC",
+      "source": "Rtings · Brüel & Kjær 5128",
+      "path": "results/Rtings/Bruel & Kjaer 5128 in-ear/Anker Soundcore Liberty 4 NC/Anker Soundcore Liberty 4 NC ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings · Brüel & Kjær 5128. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "google-pixel-buds-pro2",
+      "name": "Google Pixel Buds Pro 2",
+      "source": "Rtings · Brüel & Kjær 5128",
+      "path": "results/Rtings/Bruel & Kjaer 5128 in-ear/Google Pixel Buds Pro 2/Google Pixel Buds Pro 2 ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings · Brüel & Kjær 5128. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "jabra-elite10-gen2",
+      "name": "Jabra Elite 10 Gen 2",
+      "source": "Rtings · Brüel & Kjær 5128",
+      "path": "results/Rtings/Bruel & Kjaer 5128 in-ear/Jabra Elite 10 Gen 2/Jabra Elite 10 Gen 2 ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings · Brüel & Kjær 5128. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "technics-eah-az80",
+      "name": "Technics EAH-AZ80",
+      "source": "Rtings · Brüel & Kjær 5128",
+      "path": "results/Rtings/Bruel & Kjaer 5128 in-ear/Technics EAH-AZ80/Technics EAH-AZ80 ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings · Brüel & Kjær 5128. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "moondrop-aria",
+      "name": "Moondrop Aria",
+      "source": "oratory1990 · in-ear",
+      "path": "results/oratory1990/in-ear/Moondrop Aria/Moondrop Aria ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones oratory1990 · in-ear. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "moondrop-blessing3",
+      "name": "Moondrop Blessing 3",
+      "source": "Rtings · Brüel & Kjær 5128",
+      "path": "results/Rtings/Bruel & Kjaer 5128 in-ear/Moondrop Blessing 3/Moondrop Blessing 3 ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings · Brüel & Kjær 5128. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "moondrop-dusk",
+      "name": "Moondrop x Crinacle DUSK",
+      "source": "Rtings · Brüel & Kjær 5128",
+      "path": "results/Rtings/Bruel & Kjaer 5128 in-ear/Moondrop x Crinacle DUSK/Moondrop x Crinacle DUSK ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings · Brüel & Kjær 5128. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "truthear-hexa",
+      "name": "Truthear Hexa",
+      "source": "Rtings · Brüel & Kjær 5128",
+      "path": "results/Rtings/Bruel & Kjaer 5128 in-ear/Truthear Hexa/Truthear Hexa ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings · Brüel & Kjær 5128. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "truthear-zero-red",
+      "name": "Truthear x Crinacle Zero RED",
+      "source": "Rtings · Brüel & Kjær 5128",
+      "path": "results/Rtings/Bruel & Kjaer 5128 in-ear/Truthear x Crinacle Zero RED/Truthear x Crinacle Zero RED ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones Rtings · Brüel & Kjær 5128. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "truthear-nova",
+      "name": "Truthear Nova",
+      "source": "oratory1990 · in-ear",
+      "path": "results/oratory1990/in-ear/Truthear Nova/Truthear Nova ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones oratory1990 · in-ear. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "7hz-salnotes-zero",
+      "name": "7Hz Salnotes Zero",
+      "source": "oratory1990 · in-ear",
+      "path": "results/oratory1990/in-ear/7Hz Salnotes Zero/7Hz Salnotes Zero ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones oratory1990 · in-ear. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "7hz-timeless",
+      "name": "7Hz Timeless",
+      "source": "oratory1990 · in-ear",
+      "path": "results/oratory1990/in-ear/7Hz Timeless/7Hz Timeless ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones oratory1990 · in-ear. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    },
+    {
+      "id": "etymotic-er2xr",
+      "name": "Etymotic ER2XR",
+      "source": "oratory1990 · in-ear",
+      "path": "results/oratory1990/in-ear/Etymotic ER2XR/Etymotic ER2XR ParametricEQ.txt",
+      "description": "Perfil AutoEq a partir de mediciones oratory1990 · in-ear. El sellado, las almohadillas o puntas y el modo de audio cambian el resultado."
+    }
+  ]
+}

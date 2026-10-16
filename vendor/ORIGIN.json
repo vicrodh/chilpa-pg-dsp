@@ -1,0 +1,7 @@
+{
+  "repository": "https://github.com/vicrodh/chilpa-plugins-sdk",
+  "revision": "f3331ad97593c23277351e4cc1c752f9b2719028",
+  "tag": "protocol-4",
+  "paths": ["chilpa-plugin-api", "chilpa-plugin-sdk"],
+  "changes": "Cargo manifests use the pinned workspace package values as literals for standalone vendoring. Rust sources are unchanged."
+}

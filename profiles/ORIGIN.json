@@ -1,0 +1,466 @@
+[
+  {
+    "id": "hd650",
+    "path": "results/Rtings/HMS II.3 over-ear/Sennheiser HD 650/Sennheiser HD 650 ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · HMS II.3",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/HMS%20II.3%20over-ear/Sennheiser%20HD%20650/Sennheiser%20HD%20650%20ParametricEQ.txt"
+  },
+  {
+    "id": "edition-xs",
+    "path": "results/Rtings/Bruel & Kjaer 5128 over-ear/HIFIMAN Edition XS/HIFIMAN Edition XS ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · Brüel & Kjær 5128",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/Bruel%20%26%20Kjaer%205128%20over-ear/HIFIMAN%20Edition%20XS/HIFIMAN%20Edition%20XS%20ParametricEQ.txt"
+  },
+  {
+    "id": "pxc550",
+    "path": "results/Innerfidelity/over-ear/Sennheiser PXC 550 Wireless (wireless, ANC on)/Sennheiser PXC 550 Wireless (wireless, ANC on) ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Innerfidelity · wireless, ANC on",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Innerfidelity/over-ear/Sennheiser%20PXC%20550%20Wireless%20%28wireless%2C%20ANC%20on%29/Sennheiser%20PXC%20550%20Wireless%20%28wireless%2C%20ANC%20on%29%20ParametricEQ.txt"
+  },
+  {
+    "id": "pxc550-ii",
+    "path": "results/Rtings/HMS II.3 over-ear/Sennheiser PXC 550-II Wireless/Sennheiser PXC 550-II Wireless ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · HMS II.3",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/HMS%20II.3%20over-ear/Sennheiser%20PXC%20550-II%20Wireless/Sennheiser%20PXC%20550-II%20Wireless%20ParametricEQ.txt"
+  },
+  {
+    "id": "sennheiser-hd600",
+    "path": "results/Rtings/Bruel & Kjaer 5128 over-ear/Sennheiser HD 600/Sennheiser HD 600 ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · Brüel & Kjær 5128",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/Bruel%20%26%20Kjaer%205128%20over-ear/Sennheiser%20HD%20600/Sennheiser%20HD%20600%20ParametricEQ.txt"
+  },
+  {
+    "id": "sennheiser-hd560s",
+    "path": "results/Rtings/Bruel & Kjaer 5128 over-ear/Sennheiser HD 560S/Sennheiser HD 560S ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · Brüel & Kjær 5128",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/Bruel%20%26%20Kjaer%205128%20over-ear/Sennheiser%20HD%20560S/Sennheiser%20HD%20560S%20ParametricEQ.txt"
+  },
+  {
+    "id": "sennheiser-hd660s2",
+    "path": "results/Rtings/HMS II.3 over-ear/Sennheiser HD 660S2/Sennheiser HD 660S2 ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · HMS II.3",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/HMS%20II.3%20over-ear/Sennheiser%20HD%20660S2/Sennheiser%20HD%20660S2%20ParametricEQ.txt"
+  },
+  {
+    "id": "sennheiser-hd800s",
+    "path": "results/Rtings/Bruel & Kjaer 5128 over-ear/Sennheiser HD 800 S/Sennheiser HD 800 S ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · Brüel & Kjær 5128",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/Bruel%20%26%20Kjaer%205128%20over-ear/Sennheiser%20HD%20800%20S/Sennheiser%20HD%20800%20S%20ParametricEQ.txt"
+  },
+  {
+    "id": "sennheiser-momentum4",
+    "path": "results/Rtings/Bruel & Kjaer 5128 over-ear/Sennheiser Momentum 4 Wireless/Sennheiser Momentum 4 Wireless ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · Brüel & Kjær 5128",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/Bruel%20%26%20Kjaer%205128%20over-ear/Sennheiser%20Momentum%204%20Wireless/Sennheiser%20Momentum%204%20Wireless%20ParametricEQ.txt"
+  },
+  {
+    "id": "sony-wh1000xm4",
+    "path": "results/Rtings/Bruel & Kjaer 5128 over-ear/Sony WH-1000XM4/Sony WH-1000XM4 ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · Brüel & Kjær 5128",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/Bruel%20%26%20Kjaer%205128%20over-ear/Sony%20WH-1000XM4/Sony%20WH-1000XM4%20ParametricEQ.txt"
+  },
+  {
+    "id": "sony-wh1000xm5",
+    "path": "results/Rtings/Bruel & Kjaer 5128 over-ear/Sony WH-1000XM5/Sony WH-1000XM5 ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · Brüel & Kjær 5128",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/Bruel%20%26%20Kjaer%205128%20over-ear/Sony%20WH-1000XM5/Sony%20WH-1000XM5%20ParametricEQ.txt"
+  },
+  {
+    "id": "sony-whch720n",
+    "path": "results/Rtings/Bruel & Kjaer 5128 over-ear/Sony WH-CH720N/Sony WH-CH720N ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · Brüel & Kjær 5128",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/Bruel%20%26%20Kjaer%205128%20over-ear/Sony%20WH-CH720N/Sony%20WH-CH720N%20ParametricEQ.txt"
+  },
+  {
+    "id": "sony-mdr7506",
+    "path": "results/Rtings/HMS II.3 over-ear/Sony MDR-7506/Sony MDR-7506 ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · HMS II.3",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/HMS%20II.3%20over-ear/Sony%20MDR-7506/Sony%20MDR-7506%20ParametricEQ.txt"
+  },
+  {
+    "id": "bose-qc35-ii",
+    "path": "results/Rtings/HMS II.3 over-ear/Bose QuietComfort 35 II/Bose QuietComfort 35 II ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · HMS II.3",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/HMS%20II.3%20over-ear/Bose%20QuietComfort%2035%20II/Bose%20QuietComfort%2035%20II%20ParametricEQ.txt"
+  },
+  {
+    "id": "bose-qc45",
+    "path": "results/Rtings/Bruel & Kjaer 5128 over-ear/Bose QuietComfort 45/Bose QuietComfort 45 ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · Brüel & Kjær 5128",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/Bruel%20%26%20Kjaer%205128%20over-ear/Bose%20QuietComfort%2045/Bose%20QuietComfort%2045%20ParametricEQ.txt"
+  },
+  {
+    "id": "bose-qc-ultra",
+    "path": "results/Rtings/Bruel & Kjaer 5128 over-ear/Bose QuietComfort Ultra Headphones/Bose QuietComfort Ultra Headphones ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · Brüel & Kjær 5128",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/Bruel%20%26%20Kjaer%205128%20over-ear/Bose%20QuietComfort%20Ultra%20Headphones/Bose%20QuietComfort%20Ultra%20Headphones%20ParametricEQ.txt"
+  },
+  {
+    "id": "apple-airpods-max",
+    "path": "results/Rtings/Bruel & Kjaer 5128 over-ear/Apple AirPods Max/Apple AirPods Max ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · Brüel & Kjær 5128",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/Bruel%20%26%20Kjaer%205128%20over-ear/Apple%20AirPods%20Max/Apple%20AirPods%20Max%20ParametricEQ.txt"
+  },
+  {
+    "id": "audio-technica-m40x",
+    "path": "results/Rtings/HMS II.3 over-ear/Audio-Technica ATH-M40x/Audio-Technica ATH-M40x ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · HMS II.3",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/HMS%20II.3%20over-ear/Audio-Technica%20ATH-M40x/Audio-Technica%20ATH-M40x%20ParametricEQ.txt"
+  },
+  {
+    "id": "audio-technica-m50x",
+    "path": "results/Rtings/Bruel & Kjaer 5128 over-ear/Audio-Technica ATH-M50x/Audio-Technica ATH-M50x ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · Brüel & Kjær 5128",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/Bruel%20%26%20Kjaer%205128%20over-ear/Audio-Technica%20ATH-M50x/Audio-Technica%20ATH-M50x%20ParametricEQ.txt"
+  },
+  {
+    "id": "audio-technica-r70x",
+    "path": "results/Rtings/HMS II.3 over-ear/Audio-Technica ATH-R70x/Audio-Technica ATH-R70x ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · HMS II.3",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/HMS%20II.3%20over-ear/Audio-Technica%20ATH-R70x/Audio-Technica%20ATH-R70x%20ParametricEQ.txt"
+  },
+  {
+    "id": "beyerdynamic-dt770-pro",
+    "path": "results/Rtings/Bruel & Kjaer 5128 over-ear/Beyerdynamic DT 770 Pro/Beyerdynamic DT 770 Pro ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · Brüel & Kjær 5128",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/Bruel%20%26%20Kjaer%205128%20over-ear/Beyerdynamic%20DT%20770%20Pro/Beyerdynamic%20DT%20770%20Pro%20ParametricEQ.txt"
+  },
+  {
+    "id": "beyerdynamic-dt990-pro",
+    "path": "results/Rtings/Bruel & Kjaer 5128 over-ear/Beyerdynamic DT 990 Pro/Beyerdynamic DT 990 Pro ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · Brüel & Kjær 5128",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/Bruel%20%26%20Kjaer%205128%20over-ear/Beyerdynamic%20DT%20990%20Pro/Beyerdynamic%20DT%20990%20Pro%20ParametricEQ.txt"
+  },
+  {
+    "id": "beyerdynamic-dt700-pro-x",
+    "path": "results/Rtings/HMS II.3 over-ear/Beyerdynamic DT 700 Pro X/Beyerdynamic DT 700 Pro X ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · HMS II.3",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/HMS%20II.3%20over-ear/Beyerdynamic%20DT%20700%20Pro%20X/Beyerdynamic%20DT%20700%20Pro%20X%20ParametricEQ.txt"
+  },
+  {
+    "id": "beyerdynamic-dt900-pro-x",
+    "path": "results/Rtings/HMS II.3 over-ear/Beyerdynamic DT 900 Pro X/Beyerdynamic DT 900 Pro X ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · HMS II.3",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/HMS%20II.3%20over-ear/Beyerdynamic%20DT%20900%20Pro%20X/Beyerdynamic%20DT%20900%20Pro%20X%20ParametricEQ.txt"
+  },
+  {
+    "id": "akg-k371",
+    "path": "results/Rtings/HMS II.3 over-ear/AKG K371/AKG K371 ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · HMS II.3",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/HMS%20II.3%20over-ear/AKG%20K371/AKG%20K371%20ParametricEQ.txt"
+  },
+  {
+    "id": "akg-k702",
+    "path": "results/Rtings/HMS II.3 over-ear/AKG K702/AKG K702 ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · HMS II.3",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/HMS%20II.3%20over-ear/AKG%20K702/AKG%20K702%20ParametricEQ.txt"
+  },
+  {
+    "id": "hifiman-sundara-2020",
+    "path": "results/Rtings/Bruel & Kjaer 5128 over-ear/HIFIMAN Sundara (post-2020 earpads)/HIFIMAN Sundara (post-2020 earpads) ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · Brüel & Kjær 5128",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/Bruel%20%26%20Kjaer%205128%20over-ear/HIFIMAN%20Sundara%20%28post-2020%20earpads%29/HIFIMAN%20Sundara%20%28post-2020%20earpads%29%20ParametricEQ.txt"
+  },
+  {
+    "id": "hifiman-he400se",
+    "path": "results/Rtings/HMS II.3 over-ear/HIFIMAN HE400se/HIFIMAN HE400se ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · HMS II.3",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/HMS%20II.3%20over-ear/HIFIMAN%20HE400se/HIFIMAN%20HE400se%20ParametricEQ.txt"
+  },
+  {
+    "id": "hifiman-arya-stealth",
+    "path": "results/Rtings/Bruel & Kjaer 5128 over-ear/HIFIMAN Arya Stealth Magnet Version/HIFIMAN Arya Stealth Magnet Version ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · Brüel & Kjær 5128",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/Bruel%20%26%20Kjaer%205128%20over-ear/HIFIMAN%20Arya%20Stealth%20Magnet%20Version/HIFIMAN%20Arya%20Stealth%20Magnet%20Version%20ParametricEQ.txt"
+  },
+  {
+    "id": "focal-bathys",
+    "path": "results/Rtings/Bruel & Kjaer 5128 over-ear/Focal Bathys/Focal Bathys ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · Brüel & Kjær 5128",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/Bruel%20%26%20Kjaer%205128%20over-ear/Focal%20Bathys/Focal%20Bathys%20ParametricEQ.txt"
+  },
+  {
+    "id": "focal-clear",
+    "path": "results/oratory1990/over-ear/Focal Clear/Focal Clear ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "oratory1990 · over-ear",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/oratory1990/over-ear/Focal%20Clear/Focal%20Clear%20ParametricEQ.txt"
+  },
+  {
+    "id": "meze-99-classics",
+    "path": "results/oratory1990/over-ear/Meze 99 Classics/Meze 99 Classics ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "oratory1990 · over-ear",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/oratory1990/over-ear/Meze%2099%20Classics/Meze%2099%20Classics%20ParametricEQ.txt"
+  },
+  {
+    "id": "meze-109-pro",
+    "path": "results/oratory1990/over-ear/Meze 109 Pro/Meze 109 Pro ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "oratory1990 · over-ear",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/oratory1990/over-ear/Meze%20109%20Pro/Meze%20109%20Pro%20ParametricEQ.txt"
+  },
+  {
+    "id": "audeze-maxwell",
+    "path": "results/Rtings/Bruel & Kjaer 5128 over-ear/Audeze Maxwell/Audeze Maxwell ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · Brüel & Kjær 5128",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/Bruel%20%26%20Kjaer%205128%20over-ear/Audeze%20Maxwell/Audeze%20Maxwell%20ParametricEQ.txt"
+  },
+  {
+    "id": "audeze-lcd-x-2021",
+    "path": "results/oratory1990/over-ear/Audeze LCD-X (2021)/Audeze LCD-X (2021) ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "oratory1990 · over-ear",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/oratory1990/over-ear/Audeze%20LCD-X%20%282021%29/Audeze%20LCD-X%20%282021%29%20ParametricEQ.txt"
+  },
+  {
+    "id": "philips-fidelio-x2hr",
+    "path": "results/Rtings/Bruel & Kjaer 5128 over-ear/Philips Fidelio X2HR/Philips Fidelio X2HR ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · Brüel & Kjær 5128",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/Bruel%20%26%20Kjaer%205128%20over-ear/Philips%20Fidelio%20X2HR/Philips%20Fidelio%20X2HR%20ParametricEQ.txt"
+  },
+  {
+    "id": "shure-srh840a",
+    "path": "results/oratory1990/over-ear/Shure SRH840A/Shure SRH840A ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "oratory1990 · over-ear",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/oratory1990/over-ear/Shure%20SRH840A/Shure%20SRH840A%20ParametricEQ.txt"
+  },
+  {
+    "id": "apple-airpods-pro2",
+    "path": "results/Rtings/Bruel & Kjaer 5128 in-ear/Apple AirPods Pro2/Apple AirPods Pro2 ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · Brüel & Kjær 5128",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/Bruel%20%26%20Kjaer%205128%20in-ear/Apple%20AirPods%20Pro2/Apple%20AirPods%20Pro2%20ParametricEQ.txt"
+  },
+  {
+    "id": "samsung-galaxy-buds2-pro",
+    "path": "results/Rtings/Bruel & Kjaer 5128 in-ear/Samsung Galaxy Buds2 Pro/Samsung Galaxy Buds2 Pro ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · Brüel & Kjær 5128",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/Bruel%20%26%20Kjaer%205128%20in-ear/Samsung%20Galaxy%20Buds2%20Pro/Samsung%20Galaxy%20Buds2%20Pro%20ParametricEQ.txt"
+  },
+  {
+    "id": "samsung-galaxy-buds3-pro",
+    "path": "results/Rtings/Bruel & Kjaer 5128 in-ear/Samsung Galaxy Buds3 Pro/Samsung Galaxy Buds3 Pro ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · Brüel & Kjær 5128",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/Bruel%20%26%20Kjaer%205128%20in-ear/Samsung%20Galaxy%20Buds3%20Pro/Samsung%20Galaxy%20Buds3%20Pro%20ParametricEQ.txt"
+  },
+  {
+    "id": "sony-wf1000xm5",
+    "path": "results/Rtings/Bruel & Kjaer 5128 in-ear/Sony WF-1000XM5/Sony WF-1000XM5 ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · Brüel & Kjær 5128",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/Bruel%20%26%20Kjaer%205128%20in-ear/Sony%20WF-1000XM5/Sony%20WF-1000XM5%20ParametricEQ.txt"
+  },
+  {
+    "id": "bose-qc-ultra-earbuds",
+    "path": "results/Rtings/Bruel & Kjaer 5128 in-ear/Bose QuietComfort Ultra Earbuds/Bose QuietComfort Ultra Earbuds ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · Brüel & Kjær 5128",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/Bruel%20%26%20Kjaer%205128%20in-ear/Bose%20QuietComfort%20Ultra%20Earbuds/Bose%20QuietComfort%20Ultra%20Earbuds%20ParametricEQ.txt"
+  },
+  {
+    "id": "sennheiser-ie200",
+    "path": "results/Rtings/Bruel & Kjaer 5128 in-ear/Sennheiser IE 200/Sennheiser IE 200 ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · Brüel & Kjær 5128",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/Bruel%20%26%20Kjaer%205128%20in-ear/Sennheiser%20IE%20200/Sennheiser%20IE%20200%20ParametricEQ.txt"
+  },
+  {
+    "id": "sennheiser-ie600",
+    "path": "results/oratory1990/in-ear/Sennheiser IE 600/Sennheiser IE 600 ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "oratory1990 · in-ear",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/oratory1990/in-ear/Sennheiser%20IE%20600/Sennheiser%20IE%20600%20ParametricEQ.txt"
+  },
+  {
+    "id": "sennheiser-momentum-tw4",
+    "path": "results/Rtings/Bruel & Kjaer 5128 in-ear/Sennheiser MOMENTUM True Wireless 4/Sennheiser MOMENTUM True Wireless 4 ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · Brüel & Kjær 5128",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/Bruel%20%26%20Kjaer%205128%20in-ear/Sennheiser%20MOMENTUM%20True%20Wireless%204/Sennheiser%20MOMENTUM%20True%20Wireless%204%20ParametricEQ.txt"
+  },
+  {
+    "id": "anker-liberty4-nc",
+    "path": "results/Rtings/Bruel & Kjaer 5128 in-ear/Anker Soundcore Liberty 4 NC/Anker Soundcore Liberty 4 NC ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · Brüel & Kjær 5128",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/Bruel%20%26%20Kjaer%205128%20in-ear/Anker%20Soundcore%20Liberty%204%20NC/Anker%20Soundcore%20Liberty%204%20NC%20ParametricEQ.txt"
+  },
+  {
+    "id": "google-pixel-buds-pro2",
+    "path": "results/Rtings/Bruel & Kjaer 5128 in-ear/Google Pixel Buds Pro 2/Google Pixel Buds Pro 2 ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · Brüel & Kjær 5128",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/Bruel%20%26%20Kjaer%205128%20in-ear/Google%20Pixel%20Buds%20Pro%202/Google%20Pixel%20Buds%20Pro%202%20ParametricEQ.txt"
+  },
+  {
+    "id": "jabra-elite10-gen2",
+    "path": "results/Rtings/Bruel & Kjaer 5128 in-ear/Jabra Elite 10 Gen 2/Jabra Elite 10 Gen 2 ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · Brüel & Kjær 5128",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/Bruel%20%26%20Kjaer%205128%20in-ear/Jabra%20Elite%2010%20Gen%202/Jabra%20Elite%2010%20Gen%202%20ParametricEQ.txt"
+  },
+  {
+    "id": "technics-eah-az80",
+    "path": "results/Rtings/Bruel & Kjaer 5128 in-ear/Technics EAH-AZ80/Technics EAH-AZ80 ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · Brüel & Kjær 5128",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/Bruel%20%26%20Kjaer%205128%20in-ear/Technics%20EAH-AZ80/Technics%20EAH-AZ80%20ParametricEQ.txt"
+  },
+  {
+    "id": "moondrop-aria",
+    "path": "results/oratory1990/in-ear/Moondrop Aria/Moondrop Aria ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "oratory1990 · in-ear",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/oratory1990/in-ear/Moondrop%20Aria/Moondrop%20Aria%20ParametricEQ.txt"
+  },
+  {
+    "id": "moondrop-blessing3",
+    "path": "results/Rtings/Bruel & Kjaer 5128 in-ear/Moondrop Blessing 3/Moondrop Blessing 3 ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · Brüel & Kjær 5128",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/Bruel%20%26%20Kjaer%205128%20in-ear/Moondrop%20Blessing%203/Moondrop%20Blessing%203%20ParametricEQ.txt"
+  },
+  {
+    "id": "moondrop-dusk",
+    "path": "results/Rtings/Bruel & Kjaer 5128 in-ear/Moondrop x Crinacle DUSK/Moondrop x Crinacle DUSK ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · Brüel & Kjær 5128",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/Bruel%20%26%20Kjaer%205128%20in-ear/Moondrop%20x%20Crinacle%20DUSK/Moondrop%20x%20Crinacle%20DUSK%20ParametricEQ.txt"
+  },
+  {
+    "id": "truthear-hexa",
+    "path": "results/Rtings/Bruel & Kjaer 5128 in-ear/Truthear Hexa/Truthear Hexa ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · Brüel & Kjær 5128",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/Bruel%20%26%20Kjaer%205128%20in-ear/Truthear%20Hexa/Truthear%20Hexa%20ParametricEQ.txt"
+  },
+  {
+    "id": "truthear-zero-red",
+    "path": "results/Rtings/Bruel & Kjaer 5128 in-ear/Truthear x Crinacle Zero RED/Truthear x Crinacle Zero RED ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "Rtings · Brüel & Kjær 5128",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/Rtings/Bruel%20%26%20Kjaer%205128%20in-ear/Truthear%20x%20Crinacle%20Zero%20RED/Truthear%20x%20Crinacle%20Zero%20RED%20ParametricEQ.txt"
+  },
+  {
+    "id": "truthear-nova",
+    "path": "results/oratory1990/in-ear/Truthear Nova/Truthear Nova ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "oratory1990 · in-ear",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/oratory1990/in-ear/Truthear%20Nova/Truthear%20Nova%20ParametricEQ.txt"
+  },
+  {
+    "id": "7hz-salnotes-zero",
+    "path": "results/oratory1990/in-ear/7Hz Salnotes Zero/7Hz Salnotes Zero ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "oratory1990 · in-ear",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/oratory1990/in-ear/7Hz%20Salnotes%20Zero/7Hz%20Salnotes%20Zero%20ParametricEQ.txt"
+  },
+  {
+    "id": "7hz-timeless",
+    "path": "results/oratory1990/in-ear/7Hz Timeless/7Hz Timeless ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "oratory1990 · in-ear",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/oratory1990/in-ear/7Hz%20Timeless/7Hz%20Timeless%20ParametricEQ.txt"
+  },
+  {
+    "id": "etymotic-er2xr",
+    "path": "results/oratory1990/in-ear/Etymotic ER2XR/Etymotic ER2XR ParametricEQ.txt",
+    "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+    "source": "oratory1990 · in-ear",
+    "license": "MIT",
+    "url": "https://github.com/jaakkopasanen/AutoEq/blob/7ae0f56d53074872b028649617a22bbb4232feb7/results/oratory1990/in-ear/Etymotic%20ER2XR/Etymotic%20ER2XR%20ParametricEQ.txt"
+  }
+]

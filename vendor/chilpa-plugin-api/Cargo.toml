@@ -1,0 +1,15 @@
+[package]
+name = "chilpa-plugin-api"
+description = "The messages Chilpa and a plugin exchange"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+rust-version = "1.90"
+
+[dependencies]
+# The only dependency, on purpose: this crate is compiled into every plugin,
+# so whatever it pulls in ends up inside each `.wasm`.
+serde = { version = "1", features = ["derive"] }
+
+[dev-dependencies]
+serde_json = "1"

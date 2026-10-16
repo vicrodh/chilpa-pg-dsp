@@ -1,0 +1,12 @@
+[package]
+name = "chilpa-plugin-sdk"
+description = "What a Chilpa plugin written in Rust needs so it does not write the ABI by hand"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+rust-version = "1.90"
+
+[dependencies]
+chilpa-plugin-api = { path = "../chilpa-plugin-api" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"

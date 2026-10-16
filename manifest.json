@@ -1,0 +1,13 @@
+{
+  "id": "app.chilpa.dsp",
+  "name": "Chilpa DSP",
+  "version": "0.1.1",
+  "author": "Chilpa",
+  "api_version": 1,
+  "kind": "dsp",
+  "runtime": "wasm",
+  "delivers_audio": false,
+  "description": "Offline parametric equalizer, crossfeed, balance, delay and listening presets. DSP changes the signal and breaks strict bit-perfect playback. No library or account access.",
+  "icon": "adjustmentsHorizontal",
+  "capabilities": [{ "type": "process_audio" }]
+}

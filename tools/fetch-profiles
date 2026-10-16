@@ -1,0 +1,30 @@
+#!/usr/bin/env python3
+"""I fetch the catalog's measured curves from their pinned AutoEq revision."""
+import json
+import os
+from pathlib import Path
+import subprocess
+import urllib.parse
+
+root = Path(__file__).resolve().parent.parent
+catalog = json.loads((root / "profiles/catalog.json").read_text())
+revision = catalog["revision"]
+if len(revision) != 40 or any(char not in "0123456789abcdef" for char in revision):
+    raise SystemExit("I require an immutable AutoEq revision.")
+environment = dict(os.environ)
+if not environment.get("GH_CONFIG_DIR"):
+    raise SystemExit("I require GH_CONFIG_DIR to select the authenticated GitHub profile.")
+for profile in catalog["profiles"]:
+    identity = profile["id"]
+    if not identity or any(char not in "abcdefghijklmnopqrstuvwxyz0123456789-_" for char in identity):
+        raise SystemExit("I require a plain profile identifier.")
+    path = urllib.parse.quote(profile["path"], safe="/")
+    result = subprocess.run(["gh", "api", "-H", "Accept: application/vnd.github.raw+json",
+        f"repos/jaakkopasanen/AutoEq/contents/{path}?ref={revision}"], env=environment,
+        text=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    if result.returncode:
+        raise SystemExit(result.stderr)
+    if "Preamp:" not in result.stdout or "Filter 10:" not in result.stdout:
+        raise SystemExit(f"I received an invalid AutoEq response for {identity}.")
+    (root / "profiles/autoeq" / f"{identity}.txt").write_text(result.stdout)
+    print(f"Fetched {identity}", flush=True)

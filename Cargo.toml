@@ -1,0 +1,27 @@
+[package]
+name = "chilpa-pg-dsp"
+description = "Parametric EQ and listening presets for Chilpa"
+version = "0.1.1"
+edition = "2021"
+license = "MIT"
+rust-version = "1.90"
+publish = false
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+chilpa-plugin-sdk = { path = "vendor/chilpa-plugin-sdk" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[workspace]
+members = ["."]
+exclude = ["vendor/chilpa-plugin-api", "vendor/chilpa-plugin-sdk"]
+
+[profile.release]
+opt-level = "s"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true

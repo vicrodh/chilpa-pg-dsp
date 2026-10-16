@@ -1,0 +1,138 @@
+#!/usr/bin/env python3
+"""I generate listening curves and measured headphone corrections."""
+import json
+import re
+import urllib.parse
+from pathlib import Path
+
+PRESETS = []
+
+def band(shape, frequency, gain=0, q=0.7071067811865476):
+    return dict(shape=shape, frequency=frequency, gain_db=gain, q=q)
+
+def peak(frequency, gain, q=1):
+    return band("peak", frequency, gain, q)
+
+def low(frequency, gain):
+    return band("low_shelf", frequency, gain)
+
+def high(frequency, gain):
+    return band("high_shelf", frequency, gain)
+
+def hp(frequency):
+    return band("high_pass", frequency)
+
+def add(id, name, category, description, filters=(), **settings):
+    PRESETS.append(dict(id=id, name=name, category=category, description=description,
+                        filters=list(filters), **settings))
+
+add("flat", "Sin cambios", "Base", "Conserva los samples originales: sin EQ, margen adicional ni mezcla de canales.")
+add("warm-gentle", "Calidez suave", "Tono", "Un poco más de cuerpo, con el extremo agudo suavizado.", [low(160, 1.5), high(6500, -1)])
+add("warm", "Cálido", "Tono", "Más cuerpo en graves y menos brillo. Para grabaciones que resultan delgadas.", [low(180, 3), high(5000, -2)])
+add("bright", "Brillo suave", "Tono", "Añade definición sin levantar de forma pronunciada los medios altos.", [high(4500, 2)])
+add("soft-treble", "Agudos suaves", "Tono", "Reduce platos y sibilancia de forma amplia; no elimina ruido ni distorsión.", [high(4000, -3), peak(6500, -1.5, 1.2)])
+add("bass-gentle", "Graves suaves", "Tono", "Refuerzo moderado del grave, sin elevar el rango de la voz.", [low(110, 2)])
+add("bass-full", "Graves con cuerpo", "Tono", "Más peso bajo 100 Hz, con un pequeño recorte donde puede aparecer barro.", [low(100, 4), peak(250, -1.5)])
+add("bass-controlled", "Graves contenidos", "Tono", "Recorta graves amplios cuando la reproducción resulta cargada.", [low(140, -3)])
+add("air", "Aire", "Tono", "Un realce leve en el extremo alto para grabaciones apagadas.", [high(9000, 2)])
+add("presence", "Presencia", "Tono", "Acerca las voces e instrumentos solistas con un realce ancho en 2 kHz.", [peak(2000, 2, 0.8)])
+add("dark", "Oscuro", "Tono", "Reduce brillo y presencia para una escucha menos incisiva.", [high(2500, -3), peak(4500, -1)])
+add("warm-detail", "Cuerpo y detalle", "Tono", "Añade un poco de grave y aire; reduce la acumulación de medios bajos.", [low(120, 2), peak(350, -1), high(8000, 1.5)])
+add("gentle-smile", "Curva suave en U", "Tono", "Graves y agudos ligeramente realzados, con medios conservados.", [low(120, 2), high(6000, 1.5)])
+
+add("crossfeed-light", "Crossfeed ligero", "Audífonos", "Mezcla una pequeña parte de los graves entre canales para reducir la separación extrema.", crossfeed=0.12)
+add("crossfeed-medium", "Crossfeed medio", "Audífonos", "Mezcla filtrada entre canales para escuchar mezclas estéreo muy separadas.", crossfeed=0.25)
+add("crossfeed-strong", "Crossfeed intenso", "Audífonos", "Acerca los canales con mezcla filtrada. Reduce la anchura aparente.", crossfeed=0.4)
+add("vintage-stereo", "Estéreo antiguo", "Audífonos", "Reduce la separación lateral de grabaciones con voces e instrumentos en extremos opuestos.", crossfeed=0.3, width=0.65)
+add("intimate", "Escucha íntima", "Audífonos", "Imagen un poco más centrada y tono cálido; no simula una sala medida.", filters=[low(130, 1), high(5500, -1.5)], crossfeed=0.15, width=0.85)
+add("long-session", "Sesión larga", "Audífonos", "Suaviza medios altos y agudos para grabaciones que cansan; ajuste tonal subjetivo.", filters=[peak(3200, -2, 0.8), high(6500, -1.5)], crossfeed=0.12)
+add("headphone-focus", "Centro estable", "Audífonos", "Centra las voces de mezclas abiertas con una reducción leve de anchura.", crossfeed=0.18, width=0.8)
+
+add("desktop", "Escritorio", "Bocinas", "Recorta subgraves y acumulación alrededor de 180 Hz. Punto de partida para un escritorio.", [hp(45), peak(180, -2.5, 1)])
+add("compact-speakers", "Bocinas pequeñas", "Bocinas", "Reduce energía subgrave y un poco de grave alto. No promete extender la respuesta de la bocina.", [hp(65), peak(180, -1.5), high(6000, 1)])
+add("near-wall", "Cerca de la pared", "Bocinas", "Atenúa de forma amplia los graves que pueden acumularse cerca de una pared.", [low(150, -4)])
+add("boom-63", "Menos retumbe · 63 Hz", "Bocinas", "Recorte de 4 dB en 63 Hz. Úsalo solo si identificas acumulación en esa zona; no es calibración de sala.", [peak(63, -4, 3)])
+add("boom-125", "Menos retumbe · 125 Hz", "Bocinas", "Recorte de 4 dB en 125 Hz. Es un punto de partida y requiere comprobar el resultado.", [peak(125, -4, 3)])
+add("boxiness", "Menos sonido de caja", "Bocinas", "Reduce la acumulación de medios bajos alrededor de 300 Hz.", [peak(300, -3, 1.2)])
+add("rumble-cut", "Recorte de retumbo", "Bocinas", "Filtro pasaaltos de segundo orden en 30 Hz para reducir ruido subgrave.", [hp(30)])
+add("subsonic-cut", "Recorte subsónico", "Bocinas", "Filtro pasaaltos de segundo orden en 20 Hz; conserva más extensión que el recorte de retumbo.", [hp(20)])
+
+add("acoustic", "Acústico", "Música", "Un poco de presencia y aire, con menos acumulación en medios bajos.", [peak(300, -1), peak(2400, 1.5, 0.8), high(8500, 1)])
+add("classical", "Clásica", "Música", "Curva discreta: leve cuerpo en graves y un pequeño realce del extremo alto.", [low(90, 1), high(9000, 1)])
+add("jazz", "Jazz", "Música", "Cuerpo para contrabajo y presencia moderada para instrumentos acústicos.", [low(100, 1.5), peak(1800, 1, 0.8), high(7000, -0.5)])
+add("rock", "Rock", "Música", "Algo más de golpe y definición de guitarra, sin aumentar mucho el extremo agudo.", [low(100, 2), peak(300, -1), peak(2200, 1.5)])
+add("metal", "Metal", "Música", "Mantiene el golpe, reduce barro y suaviza platos en mezclas densas.", [low(90, 1.5), peak(350, -2), high(6000, -2)])
+add("electronic", "Electrónica", "Música", "Refuerzo de subgrave y un poco de aire, con margen automático de nivel.", [low(70, 3), peak(300, -1), high(8000, 1.5)])
+add("hip-hop", "Hip hop", "Música", "Más peso grave y un realce discreto del rango de articulación vocal.", [low(80, 3), peak(250, -1.5), peak(2200, 1)])
+add("pop", "Pop", "Música", "Curva amplia de graves y agudos, con una presencia vocal leve.", [low(110, 2), peak(1800, 1), high(6500, 1)])
+add("ambient", "Ambient", "Música", "Tono cálido y menos presencia incisiva; mantiene la anchura de la grabación.", [low(130, 2), peak(3200, -1.5), high(7000, -1)])
+add("vocal", "Voces", "Música", "Menos medios bajos y más claridad en el rango de voz, sin aislamiento vocal.", [hp(45), peak(280, -1.5), peak(2000, 2, 0.8)])
+
+add("speech", "Voz hablada", "Uso diario", "Reduce ruido grave y mejora articulación de voz; no separa la voz del resto.", [hp(80), peak(250, -2), peak(2500, 2, 0.8)])
+add("podcast", "Podcasts", "Uso diario", "Filtro de graves y compresión moderada para reducir diferencias de nivel dentro de una conversación.", [hp(70), peak(2200, 1.5)], compressor_ratio=2.5, compressor_threshold_db=-22)
+add("night", "Noche", "Uso diario", "Menos graves y compresión para reducir picos. No añade ganancia de compensación.", [low(180, -4), high(6500, -1.5)], compressor_ratio=3, compressor_threshold_db=-24)
+add("quiet-listening", "Escucha a volumen bajo", "Uso diario", "Compensación tonal fija de graves y aire. No sigue automáticamente el control de volumen.", [low(100, 3), high(7000, 1.5)])
+add("fatigue-relief", "Menos fatiga", "Uso diario", "Atenúa la zona de presencia y el brillo en grabaciones agresivas.", [peak(3000, -2.5, 0.8), high(5500, -2)])
+add("dialogue", "Diálogo estable", "Uso diario", "Claridad vocal y compresión enlazada entre canales para controlar cambios de nivel.", [hp(80), peak(2500, 2)], compressor_ratio=3.5, compressor_threshold_db=-24)
+add("background", "Música de fondo", "Uso diario", "Tono suave y compresión ligera para mantener la música en segundo plano.", [low(130, -1.5), high(4500, -2)], compressor_ratio=2, compressor_threshold_db=-24)
+
+add("mono", "Mono", "Canales", "Promedia los canales izquierdo y derecho. Útil para escuchar ambos lados con un solo auricular.", width=0)
+add("narrow-stereo", "Estéreo reducido", "Canales", "Reduce a la mitad la información lateral, sin invertir canales ni añadir reverberación.", width=0.5)
+add("left-down-3", "Izquierdo −3 dB", "Canales", "Atenúa el canal izquierdo unos 3 dB. Ajuste manual; no presupone una asimetría medida.", balance=0.2920542156)
+add("right-down-3", "Derecho −3 dB", "Canales", "Atenúa el canal derecho unos 3 dB. Ajuste manual; no presupone una asimetría medida.", balance=-0.2920542156)
+add("delay-left", "Retardo izquierdo · 0.3 ms", "Canales", "Retrasa el canal izquierdo 0.3 ms, aproximadamente 10 cm de recorrido a temperatura ambiente.", delay_left_ms=0.3)
+add("delay-right", "Retardo derecho · 0.3 ms", "Canales", "Retrasa el canal derecho 0.3 ms. Comprueba qué canal llega primero antes de elegirlo.", delay_right_ms=0.3)
+add("invert-polarity", "Invertir polaridad", "Canales", "Invierte la polaridad de ambos canales. No corrige por sí solo una conexión equivocada de una sola bocina.", invert_left=True, invert_right=True)
+
+root = Path(__file__).resolve().parent.parent
+catalog = json.loads((root / "profiles" / "catalog.json").read_text())
+revision = catalog["revision"]
+measured = [(profile["id"], profile["name"], profile["source"], profile["path"], profile["description"])
+            for profile in catalog["profiles"]]
+origins = []
+for id, name, source, path, description in measured:
+    text = (root / "profiles" / "autoeq" / f"{id}.txt").read_text()
+    preamp = float(re.search(r"Preamp: ([\d.+-]+) dB", text)[1])
+    filters = []
+    for kind, frequency, gain, q in re.findall(r"Filter \d+: ON (\w+) Fc ([\d.]+) Hz Gain ([\d.+-]+) dB Q ([\d.]+)", text):
+        filters.append(band({"PK": "peak", "LSC": "low_shelf", "HSC": "high_shelf"}[kind], float(frequency), float(gain), float(q)))
+    assert len(filters) == 10, id
+    assert -60 <= preamp <= 0, id
+    for setting in filters:
+        assert 10 <= setting["frequency"] <= 24000, id
+        assert -24 <= setting["gain_db"] <= 18, id
+        assert 0.1 <= setting["q"] <= 12, id
+    url = "https://github.com/jaakkopasanen/AutoEq/blob/" + revision + "/" + urllib.parse.quote(path)
+    add(id, name, "Audífonos", description, filters, preamp_db=preamp, source="AutoEq · " + source, source_url=url)
+    origins.append(dict(id=id, path=path, revision=revision, source=source, license="MIT", url=url))
+
+add("soundbar-21", "Soundbar 2.1 · voz y graves controlados", "Soundbars", "Ajuste genérico para barras 2.1, incluida Creative Stage V2: menos retumbe y más claridad vocal. No es una corrección medida de ese modelo. Empieza con el modo de sonido neutro de la barra.", [hp(35), low(130, -2.5), peak(2300, 1.5, 0.8)], source="Chilpa · ajuste genérico sin medición del equipo")
+assert len(PRESETS) <= 128
+assert len({preset["id"] for preset in PRESETS}) == len(PRESETS)
+(root / "profiles" / "ORIGIN.json").write_text(json.dumps(origins, ensure_ascii=False, indent=2) + "\n")
+spanish = {p["id"]: {key: p.get(key, "") for key in ("name", "category", "description", "source")} for p in PRESETS}
+english = json.loads((root / "translations" / "en.json").read_text())
+categories = {"Base": "Base", "Tono": "Tone", "Audífonos": "Headphones", "Bocinas": "Speakers",
+              "Música": "Music", "Uso diario": "Everyday", "Canales": "Channels", "Soundbars": "Soundbars"}
+measured_notes = {
+    "hd650": "AutoEq profile from Rtings measurements. Response varies with earpads, fit and individual units.",
+    "edition-xs": "AutoEq profile from Rtings 5128 measurements. Adjust bass and treble for the seal and your preference.",
+    "pxc550": "AutoEq profile measured wirelessly with ANC on. Use that mode and disable other headphone effects.",
+    "pxc550-ii": "AutoEq profile from Rtings measurements of the II model. ANC mode, seal and internal effects affect the result.",
+}
+for preset in PRESETS:
+    preset["category"] = categories[preset["category"]]
+    if preset.get("source_url"):
+        preset["description"] = measured_notes.get(preset["id"],
+            f"AutoEq profile from {preset['source'].removeprefix('AutoEq · ')} measurements. Fit, earpads or tips and audio mode affect the result.")
+        if preset["id"] == "pxc550":
+            preset["name"] = "Sennheiser PXC 550 · wireless, ANC on"
+    else:
+        preset["name"], preset["description"] = english[preset["id"]]
+    if preset["id"] == "soundbar-21":
+        preset["source"] = "Chilpa · generic adjustment without device measurements"
+encode = lambda value: json.dumps(value, ensure_ascii=False, separators=(",", ":"))
+rows = ",\n".join(encode(preset) for preset in PRESETS)
+labels = ",\n".join(encode(id) + ":" + encode(text) for id, text in spanish.items())
+(root / "presets.json").write_text('{"protocol":1,"presets":[\n' + rows + '\n],"localizations":{"es":{\n' + labels + '\n}}}\n')
+print(f"Wrote {len(PRESETS)} bilingual presets ({len(measured)} measured AutoEq profiles)")

@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# I build and package the pinned, offline-capable WASM plugin.
+set -euo pipefail
+root=$(cd "$(dirname "$0")/.." && pwd)
+out=${1:-"$root/dist"}
+cargo build --offline --manifest-path "$root/Cargo.toml" --lib --release --target wasm32-unknown-unknown
+target_dir=$(cargo metadata --offline --no-deps --format-version 1 --manifest-path "$root/Cargo.toml" |
+    python3 -c 'import json,sys; print(json.load(sys.stdin)["target_directory"])')
+mkdir -p "$out/app.chilpa.dsp/licenses"
+cp "$target_dir/wasm32-unknown-unknown/release/chilpa_pg_dsp.wasm" "$out/app.chilpa.dsp/plugin.wasm"
+cp "$root/manifest.json" "$out/app.chilpa.dsp/manifest.json"
+cp "$root/LICENSE" "$out/app.chilpa.dsp/LICENSE"
+cp "$root/licenses/AutoEq-MIT.txt" "$out/app.chilpa.dsp/licenses/"
+cp "$root/profiles/ORIGIN.json" "$out/app.chilpa.dsp/licenses/AutoEq-ORIGIN.json"
+python3 - "$out" <<'PY'
+from pathlib import Path
+import sys, zipfile, hashlib, json
+out = Path(sys.argv[1])
+package = out / 'app.chilpa.dsp'
+version = json.loads((package / 'manifest.json').read_text())['version']
+archive = out / f'chilpa-dsp-{version}.zip'
+with zipfile.ZipFile(archive, 'w', zipfile.ZIP_DEFLATED) as z:
+    for path in sorted(package.rglob('*')):
+        if path.is_file():
+            z.write(path, path.relative_to(out))
+for path in [package / 'plugin.wasm', archive]:
+    print(f'{path}: {path.stat().st_size} bytes; SHA256 {hashlib.sha256(path.read_bytes()).hexdigest()}')
+PY

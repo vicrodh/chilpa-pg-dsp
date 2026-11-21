@@ -3,24 +3,27 @@
 use chilpa_plugin_sdk::plugin;
 use serde::Deserialize;
 use serde_json::Value;
+mod catalog;
 
 #[derive(Deserialize)]
 #[serde(deny_unknown_fields)]
 pub struct Request { protocol: u32 }
 
 pub fn presets(request: Request) -> Result<Value, String> {
-    if request.protocol != 1 { return Err("Unsupported DSP protocol.".into()); }
-    serde_json::from_str(include_str!("../presets.json")).map_err(|_| "The DSP preset catalog is invalid.".into())
+    if !matches!(request.protocol, 1 | 2) { return Err("Unsupported DSP protocol.".into()); }
+    let catalog: Value = serde_json::from_str(include_str!("../presets.json")).map_err(|_| "The DSP preset catalog is invalid.")?;
+    if request.protocol == 2 { Ok(serde_json::json!({"protocol":2,"catalog":catalog,"search":true})) }
+    else { Ok(catalog) }
 }
 
-plugin! { api_version: 1, chilpa_dsp_presets => presets }
+plugin! { api_version: 1, chilpa_dsp_presets => presets, chilpa_dsp_search => catalog::search }
 
 #[cfg(test)]
 mod tests {
     use super::*;
     #[test]
     fn protocol_mismatch_and_unknown_request_fields_are_rejected() {
-        assert!(presets(Request { protocol: 2 }).is_err());
+        assert!(presets(Request { protocol: 3 }).is_err());
         assert!(serde_json::from_str::<Request>("{}").is_err());
         assert!(serde_json::from_str::<Request>(r#"{"protocol":1,"path":"/music"}"#).is_err());
     }

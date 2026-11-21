@@ -12,6 +12,7 @@ cp "$root/manifest.json" "$out/app.chilpa.dsp/manifest.json"
 cp "$root/LICENSE" "$out/app.chilpa.dsp/LICENSE"
 cp "$root/licenses/AutoEq-MIT.txt" "$out/app.chilpa.dsp/licenses/"
 cp "$root/profiles/ORIGIN.json" "$out/app.chilpa.dsp/licenses/AutoEq-ORIGIN.json"
+cp "$root/profiles/library/ORIGIN.json" "$out/app.chilpa.dsp/licenses/AutoEq-Library-ORIGIN.json"
 python3 - "$out" <<'PY'
 from pathlib import Path
 import sys, zipfile, hashlib, json

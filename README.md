@@ -1,131 +1,133 @@
 # Chilpa DSP
 
-Preset labels are available in English and Spanish. The host chooses the
-display text from the interface language, including preset names, categories,
-descriptions and source notes. Language changes leave the processing parameters
-and selected preset IDs intact. The catalog's optional `localizations` map
-is keyed by language and then preset ID. Each entry can override `name`,
-`category`, `description` and `source`; filters and all other DSP parameters
-remain in the canonical preset.
+This update targets **Chilpa 0.1.3** and its matching plugin contracts.
+Release and catalog publication are pending that host release.
 
-This sandboxed WASM plugin provides 111 offline listening presets. The
-Chilpa host evaluates validated parameters in its PCM renderer. Guest code
-never runs on the audio thread and never receives music files, accounts or PCM.
+Chilpa DSP 0.2.0 supplies **8,825 offline presets**: 8,772 measured AutoEq
+profiles from 5,981 distinct model names, plus 53 listening presets. Multiple
+measurement sources and headphone variants remain separate entries.
 
-**DSP changes the signal and breaks strict bit-perfect playback.** This
-notice appears in the plugin description and editor. The quality flyout names the
-preset while processing is active and reports processed output.
+**The full 0.2 editor and processing controls require the matching updated
+Chilpa host with DSP bootstrap protocol 2.** Installing the ZIP alone cannot
+update a host's editor or PCM renderer. Older DSP hosts can continue loading
+the 111-preset compatibility catalog through protocol 1.
 
-Requires Chilpa 0.1.0-beta or later with DSP support, graphic equalizer and
-measured filters with Q from 0.1 to 12 and gain from -24 to +18 dB. Older hosts can reject this catalog. This package does not add
-processing to an older host by itself.
+The plugin is a data-only WASM package. The host validates parameters, owns
+preferences and processes local PCM. Guest code never receives PCM, music
+files, library data or accounts. The package requests only `process_audio`,
+with no network or storage permissions. The same ZIP is used by native and
+Flatpak hosts and by supported operating systems.
 
-## Presets and controls
+**DSP changes the signal and breaks strict bit-perfect playback.** Bypass and
+neutral processing preserve packed PCM. Native DSD and DoP bypass DSP; DSD
+already converted to PCM can be processed. Cast sends the original audio.
 
-Preset categories are Base, Tone, Headphones, Speakers, Music, Daily use,
-Channels and Soundbars. The editor has
-search, persistent favorites, up to 64 personal presets, and separate saved
-selections for each output device. The player shows a DSP control beside Cast
-only while an approved DSP plugin is available.
+## Controls in the updated host
 
-The 58 measured AutoEq profiles cover HD650, Edition XS, PXC 550 and
-PXC 550-II, plus headphones and earphones from Sony, Bose, Apple, Sennheiser, Audio-Technica, Beyerdynamic, AKG, HIFIMAN,
-Focal, Meze, Audeze, Philips, Shure, Samsung, Anker, Google, Jabra, Technics,
-Moondrop, Truthear, 7Hz and Etymotic. Exact model names, measurement providers
-and source paths are listed in `profiles/catalog.json`. The published filter parameters and preamp are preserved. The host can reduce
-preamp further to reserve one dB above the combined EQ response. The PXC
-550 profile needs its stated wireless/ANC mode; different pads, fit, device
-effects and individual units change the result.
+The larger modal has internal sidebar navigation and separate scrolling
+sections. Narrow windows use compact navigation. Only the current editor is
+mounted, and closing the modal releases it.
 
-The generic Soundbar 2.1 preset targets clearer voices and less bass buildup.
-It is a starting point for Creative Stage V2, without measured correction for
-that model or room calibration.
+- Independent Bass and Treble controls, each with gain, frequency and Q.
+  Bass supports -24 to +22.5 dB and 20–250 Hz; Treble supports -24 to +15 dB
+  and 5–15 kHz. Q is 0.1–2. Zero dB is neutral. Tone does not replace the
+  headphone correction filters.
+- Up to 64 parametric filters, separate from the two tone shelves: peak,
+  low/high shelf, low/high pass, notch and band pass. Each filter has enable,
+  channel, lock and color-group controls. Filters can be reordered. Mouse
+  dragging adjusts frequency/gain and scrolling over a point adjusts Q.
+- Graphic EQ with 5–32 logarithmically spaced bands, configurable frequency
+  endpoints and a ±12 dB range. Rebuilding starts flat and retains the
+  previous correction for restoration, including after restart.
+- Independent EQ, Tone and global bypass. Requested preamp spans -60 to
+  +24 dB. Automatic headroom defaults on, includes tone and the actual
+  channel routing, and can reduce the requested gain. It does not cancel
+  intentional dynamics pre-gain or makeup gain.
+- Crossfeed, stereo narrowing/mono, balance, polarity and up to 30 ms delay
+  per stereo channel. The stereo matrix applies only to two-channel PCM;
+  EQ and linked dynamics support up to 32 channels and 1536 kHz PCM.
+- Linked peak compressor with threshold, ratio, attack, release, knee,
+  pre-gain, makeup, detector high-pass, downward expander and gate.
+- Separate zero-latency sample-peak limiter with ceiling and release. It
+  limits after configuration crossfades and retains the last input sample.
+  It is not a true-peak limiter. The final sample guard remains a separate
+  safety boundary.
+- Measured peak-hold input/output levels, compression/limiter reduction and
+  a resettable clipped-sample counter.
 
-The default editor provides ten vertical sliders from 31 Hz to 16 kHz,
-with a ±12 dB range, a preamp, reset and bypass. A measured parametric profile
-keeps its precise filters until an explicit switch to graphic EQ. The previous
-profile and draft remain available for restoration, including after a restart. Advanced controls and import/export remain available.
+Live gestures are grouped into at most one preview every 50 ms and commit
+on release. Banks are prepared outside delivery; changes preserve compatible
+histories. Presentation-only changes preserve the running bank. Preset and
+bypass changes retain a 10 ms transition.
 
-Processing supports up to ten parametric filters (peak, low/high shelf, low/high pass,
-notch), filtered crossfeed, stereo narrowing/mono, balance, channel polarity,
-up to 30 ms channel delay and linked peak compression without makeup gain.
-The stereo matrix applies to two-channel PCM; EQ and compression apply to
-all supported channels. A 10 ms crossfade smooths preset and bypass changes.
-Filter histories persist between contiguous tracks, including audio CDs,
-and reset after seeking or skipping. Processing follows read-ahead and
-precedes device writes, so partial writes never apply a filter twice.
+## Presets, assignments and interchange
 
-Bypass and the flat preset preserve the original packed samples. Native DSD
-and DoP bypass DSP; DSD already converted to PCM can be processed. Cast sends
-the original audio and displays that local DSP does not apply. The chosen DSD mode and output sample rate remain unchanged. A band at or above 49% of
-the playback rate is skipped instead of being shifted into another range.
+Search operates on a compact offline index and returns bounded pages rather
+than loading thousands of profiles into the host. A query can match a model,
+measurement provider or variant. The existing measured IDs remain stable.
+The catalog uses the immutable AutoEq revision recorded in
+`profiles/library/ORIGIN.json`; unsupported profiles are listed there with a
+reason. Headphone fit, pads, seal, device mode and individual units affect
+measured corrections. Generic speaker presets are starting points, not room
+calibration or measured correction for a particular speaker.
 
-The renderer reserves headroom from the combined filter response and clamps
-unexpected out-of-range output samples, counting them in the editor. This is a sample
-guard, not a true-peak limiter or a guarantee against intersample peaks.
-Convolution, automatic room measurement, VST/AU hosting and dynamic loudness
-compensation are outside this version.
+The host provides favorites and up to 64 personal presets, with save-copy,
+rename, replace and batch deletion. Optional autosave updates a personal
+preset after adjustment; factory presets retain a separate per-output draft.
+Exports preserve tone, channels and processing settings. Device assignments
+take priority over explicitly assigned device classes, then the general
+default. Chilpa does not guess headphones attached to a DAC.
 
-## Build and package
+The editor accepts AutoEq parametric text, a Chilpa preset, arrays and
+versioned Chilpa preset bundles. Batch imports are validated as a whole.
+A bounded Poweramp parametric JSON adapter accepts the two exported tone
+bands and peak/shelf EQ bands, preserving channels and translating the
+exporter's normalized gain semantics. Graphic/envelope exports and external
+pass-filter gain semantics are rejected rather than approximated. Import
+compatibility does not claim acoustic equivalence between engines.
 
-The vendored SDK is pinned to
+## Build
+
+The vendored ABI/SDK is pinned to
 `f3331ad97593c23277351e4cc1c752f9b2719028` (`protocol-4`), matching the
-host's vendored API. Source provenance is in `vendor/ORIGIN.json`. Only the
-Cargo manifests are adapted for standalone use. The plugin declares API version 1 and
-DSP catalog protocol 1; these numbers are separate from the SDK tag.
+host's vendored API. `vendor/ORIGIN.json` records the source. Manifest API
+version 1, bootstrap/search protocol 2 and SDK Git tag are separate values.
+No SDK sources were changed.
 
-With Rust 1.90+ and the `wasm32-unknown-unknown` target installed:
+With Rust 1.90+ and the `wasm32-unknown-unknown` target:
 
 ```sh
 cargo test --offline -p chilpa-pg-dsp --lib
 tools/build-plugin
 ```
 
-The build produces `dist/app.chilpa.dsp/` and `dist/chilpa-dsp-0.1.1.zip`,
-including licenses and profile provenance.
+The result is `dist/chilpa-dsp-0.2.0.zip`, with its WASM, manifest, licenses
+and both compatibility and expanded-catalog provenance. Install it through
+the matching host's plugin manager and approve `process_audio`.
 
-Install the ZIP through the updated host's plugin manager and approve its
-single permission: `process_audio`. It requests no network, filesystem,
-library, account or cross-plugin permission. The host owns preferences.
-The first selection is flat/bypass; choosing a tonal preset enables DSP.
+To regenerate the measured catalog, select an authenticated `gh` profile,
+run `tools/fetch-catalog --cache /absolute/cache/path`, then
+`tools/pack-catalog`. Retrieval uses immutable Git objects and verifies their
+blob digests. `profiles/library/presets.jsonl` is the canonical input;
+`index.tsv` and `catalog.bin` are reproducible generated files. A guest
+unpacks at most one 64-profile shard at a time.
 
-The editor imports the parametric text subset used by AutoEq and common EQ
-exporters (`Preamp`, `PK`, `LS`/`LSC`, `HS`/`HSC`, `HP`/`HPQ`, `LP`/`LPQ`,
-`NO`) or an exported Chilpa preset JSON. Unknown active filter types and
-unsupported directives reject the entire import. JSON export uses the clipboard, without writing arbitrary files.
+## Licenses
 
-Run the packaged host smoke in an isolated profile:
+The plugin and the AutoEq data are MIT licensed. The package includes the
+AutoEq license and source revision/digests. The offline compression dependency
+uses the Rust flate2 backend (MIT/Apache-2.0). Poweramp's database, code,
+artwork and presets are not included.
 
-```sh
-CHILPA_DSP_PACKAGE=/absolute/path/to/dist/app.chilpa.dsp \
-  cargo test -q -p chilpa-api --test dsp
-```
+## Pull request packages
 
-That test loads the exact WASM, checks approval and catalog validation,
-selects all five equipment presets, checks every factory preset at six
-sample rates, persists favorites and personal presets, restarts the host,
-and revokes the plugin. DSP renderer tests also check real PCM output,
-partial writes, live bypass, native DSD and DoP preservation.
+GitHub Actions runs tests and packages this branch on pull requests and pushes
+to main. Download the ZIP, SHA-256 and archive-check report from the successful
+run's artifacts. These are test artifacts retained for 30 days, not releases;
+the workflow does not publish a release or update a plugin catalog.
 
-## References and licenses
+CI checks do not replace installation of the exact ZIP in a compatible native
+and Flatpak host. A build does not establish live account playback or physical
+audio output. Release validation remains separate.
 
-Feature references include [FusionDSP](https://help.volumio.com/en/articles/99-how-to-use-fusiondsp-plugin),
-[Audirvana's processing suite](https://audirvana.com/signal-processing-suite/)
-and [SqueezeDSP](https://github.com/Foxenfurter/SqueezeDSP). The
-[Navidrome plugin isolation and permission model](https://www.navidrome.org/docs/usage/features/plugins/)
-served as an integration reference; that documented capability list does
-not expose a comparable DSP contract. No DSP code from these projects is included.
-
-The filters follow the [RBJ Audio EQ Cookbook](https://www.w3.org/TR/audio-eq-cookbook/).
-The 53 generic presets are original listening adjustments, without claims
-of measured correction. The 58 measured profiles come from
-[AutoEq](https://github.com/jaakkopasanen/AutoEq) at immutable revision
-`7ae0f56d53074872b028649617a22bbb4232feb7`. Exact source paths, measurement
-providers and URLs are in `profiles/ORIGIN.json`; the input filter files
-are preserved in `profiles/autoeq/`. AutoEq's MIT license is included in
-`licenses/AutoEq-MIT.txt` and in the distributable. Regenerate the catalog
-with `tools/make-presets` without network access. To refresh the preserved
-input files, `tools/fetch-profiles` uses `gh` and requires `GH_CONFIG_DIR` to
-select the authenticated GitHub configuration; the revision remains pinned.
-
-MIT; see `LICENSE`.
+CI produces one platform-independent WASM ZIP and checks catalog regeneration.

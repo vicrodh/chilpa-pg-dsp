@@ -1,0 +1,325 @@
+{
+  "repository": "https://github.com/jaakkopasanen/AutoEq",
+  "revision": "7ae0f56d53074872b028649617a22bbb4232feb7",
+  "license": "MIT",
+  "discovered": 8850,
+  "supported": 8772,
+  "excluded": [
+    {
+      "path": "results/Auriculares Argentina/over-ear/Fifine Ampligame H6 (game)/Fifine Ampligame H6 (game) ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Auriculares Argentina/over-ear/Fifine Ampligame H6 (music)/Fifine Ampligame H6 (music) ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/DHRME/in-ear/Fairphone Fairbuds (flat eq, ANC On)/Fairphone Fairbuds (flat eq, ANC On) ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Fahryst/in-ear/HAKUGEI Sea-elf/HAKUGEI Sea-elf ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Fahryst/in-ear/Whizzer Kylin HE01B/Whizzer Kylin HE01B ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Filk/over-ear/SPC Gear Viro (breathable earpads)/SPC Gear Viro (breathable earpads) ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Filk/over-ear/SPC Gear Viro (leather earpads)/SPC Gear Viro (leather earpads) ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Harpo/in-ear/Cat Ear Audio Meow/Cat Ear Audio Meow ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Headphone.com Legacy/over-ear/Beyerdynamic Custom One Pro (step 2)/Beyerdynamic Custom One Pro (step 2) ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Headphone.com Legacy/over-ear/Denon AH-D310R/Denon AH-D310R ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Hi End Portable/in-ear/AuGlamour RT-3/AuGlamour RT-3 ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Hi End Portable/in-ear/Geek Wold GK80 (microphone cable)/Geek Wold GK80 (microphone cable) ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Hi End Portable/in-ear/Ourart Wine/Ourart Wine ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Hi End Portable/in-ear/Toneking TK12s/Toneking TK12s ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/HypetheSonics/GRAS RA0045 in-ear/Audeze LCD-i3/Audeze LCD-i3 ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/HypetheSonics/GRAS RA0045 in-ear/DUNU DK4001/DUNU DK4001 ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/HypetheSonics/GRAS RA0045 in-ear/Periodic Audio Carbon V3/Periodic Audio Carbon V3 ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/HypetheSonics/GRAS RA0045 in-ear/RHA CL2/RHA CL2 ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/HypetheSonics/earbud/Fengru EMX500/Fengru EMX500 ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/HypetheSonics/earbud/NiceHCK PK2/NiceHCK PK2 ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Innerfidelity/in-ear/Echobox Finder X1 (red filter)/Echobox Finder X1 (red filter) ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Innerfidelity/in-ear/FLC Technology FLC8 (strings-piano, clear LF, clear LF, green HF)/FLC Technology FLC8 (strings-piano, clear LF, clear LF, green HF) ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Innerfidelity/in-ear/Harman Kardon NI/Harman Kardon NI ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Innerfidelity/in-ear/Xiaomi Piston 3 Youth Edition/Xiaomi Piston 3 Youth Edition ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Innerfidelity/over-ear/Accidentally Extraordinary 51st Studios/Accidentally Extraordinary 51st Studios ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Innerfidelity/over-ear/Beats Studio 2 (2014)/Beats Studio 2 (2014) ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Innerfidelity/over-ear/Flare Audio Reference R1/Flare Audio Reference R1 ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Innerfidelity/over-ear/Kennerton Magister/Kennerton Magister ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Innerfidelity/over-ear/Koss BT540i (wired)/Koss BT540i (wired) ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Innerfidelity/over-ear/Nixon RPM/Nixon RPM ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Innerfidelity/over-ear/Oppo PM3 (sample C)/Oppo PM3 (sample C) ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Innerfidelity/over-ear/Phiaton PS 500/Phiaton PS 500 ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Innerfidelity/over-ear/Pioneer SE-M290/Pioneer SE-M290 ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Innerfidelity/over-ear/Sennheiser HD 228/Sennheiser HD 228 ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Innerfidelity/over-ear/Sennheiser HD 569/Sennheiser HD 569 ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Innerfidelity/over-ear/V-MODA Crossfade LP/V-MODA Crossfade LP ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Innerfidelity/over-ear/V-MODA Crossfade LP2/V-MODA Crossfade LP2 ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Innerfidelity/over-ear/V-MODA Crossfade Wireless (wireless)/V-MODA Crossfade Wireless (wireless) ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Kazi/in-ear/JVC HA-FDX1/JVC HA-FDX1 ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Kuulokenurkka/over-ear/Audio-Technica ATH-M50x/Audio-Technica ATH-M50x ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Kuulokenurkka/over-ear/Austrian Audio Hi-X20/Austrian Audio Hi-X20 ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Regan Cipher/in-ear/Creative Outlier Pro/Creative Outlier Pro ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Regan Cipher/in-ear/QCY Melobuds Pro (ANC on)/QCY Melobuds Pro (ANC on) ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/RikudouGoku/in-ear/DUNU Titan S/DUNU Titan S ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/RikudouGoku/in-ear/Geek Wold GK3/Geek Wold GK3 ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/RikudouGoku/in-ear/ISN AUDIO D10/ISN AUDIO D10 ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/RikudouGoku/in-ear/Shozy Form 1.1/Shozy Form 1.1 ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/RikudouGoku/in-ear/Shuoer Tape Pro/Shuoer Tape Pro ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/RikudouGoku/in-ear/Tanchjim Echo/Tanchjim Echo ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Rtings/Bruel & Kjaer 5128 in-ear/CMF by Nothing Buds Pro 2/CMF by Nothing Buds Pro 2 ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Rtings/HMS II.3 in-ear/ENACFIRE E60/ENACFIRE E60 ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Rtings/HMS II.3 in-ear/Razer Hammerhead USB-C ANC/Razer Hammerhead USB-C ANC ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Rtings/HMS II.3 in-ear/Sony WI-C600N/Sony WI-C600N ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Rtings/HMS II.3 over-ear/Audio-Technica ATH-DSR9BT/Audio-Technica ATH-DSR9BT ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Rtings/HMS II.3 over-ear/Bang & Olufsen Beoplay H9i/Bang & Olufsen Beoplay H9i ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Rtings/HMS II.3 over-ear/JBL Tune 660NC/JBL Tune 660NC ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Rtings/HMS II.3 over-ear/iClever Boostcare/iClever Boostcare ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Super Review/in-ear/FLC Technology FLC8P (gunmetal, gray, gunmetal)/FLC Technology FLC8P (gunmetal, gray, gunmetal) ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Super Review/in-ear/Sony WF-1000XM4 (Relaxed preset)/Sony WF-1000XM4 (Relaxed preset) ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Super Review/in-ear/TWISTURA Woodnote (silver nozzle)/TWISTURA Woodnote (silver nozzle) ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/Super Review/in-ear/Tin HiFi T5/Tin HiFi T5 ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/crinacle/711 in-ear/Big Bus Earbuds/Big Bus Earbuds ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/crinacle/711 in-ear/Delta Air complimentary earphones/Delta Air complimentary earphones ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/crinacle/711 in-ear/EarSonics ES5/EarSonics ES5 ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/crinacle/711 in-ear/IMR Acoustics Zenith (black)/IMR Acoustics Zenith (black) ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/crinacle/711 in-ear/JVC HA-FDX1/JVC HA-FDX1 ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/crinacle/711 in-ear/KZ ZAS/KZ ZAS ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/crinacle/711 in-ear/Noble Audio Katana/Noble Audio Katana ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/crinacle/711 in-ear/Sony MDR-7550/Sony MDR-7550 ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/crinacle/711 in-ear/Zero Audio Carbo Doppio ZH-BX700/Zero Audio Carbo Doppio ZH-BX700 ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/crinacle/711 in-ear/ddHiFi E2020A Janus/ddHiFi E2020A Janus ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/crinacle/711 in-ear/fineEars TSH-HR1000K/fineEars TSH-HR1000K ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/crinacle/Bruel & Kjaer 4620 in-ear/Shuoer Tape Pro/Shuoer Tape Pro ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/crinacle/GRAS 43AG-7 over-ear/Sennheiser HD 400 S/Sennheiser HD 400 S ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/kr0mka/over-ear/Fostex T50RP 50th Anniversary/Fostex T50RP 50th Anniversary ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/oratory1990/over-ear/Austrian Audio Hi-X60/Austrian Audio Hi-X60 ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/oratory1990/over-ear/Grado GW100/Grado GW100 ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    },
+    {
+      "path": "results/oratory1990/over-ear/HIFIMAN HE35X/HIFIMAN HE35X ParametricEQ.txt",
+      "reason": "parameters outside the supported DSP bounds"
+    }
+  ],
+  "sha256": "23f94d794d70973cb5e8d0a2aa88463e9531cf8fbde0fc1de4b257d7aa15a18c",
+  "format": "one canonical processing preset per line",
+  "packed_sha256": "4ee512c8a38d6b778d83f86d5165c78a8a193d4aabe5ebc3c28d50923898a524",
+  "shard_presets": 64
+}

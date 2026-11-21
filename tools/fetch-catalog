@@ -1,0 +1,108 @@
+#!/usr/bin/env python3
+"""Fetch every supported measured profile at the immutable AutoEq revision through gh."""
+import argparse
+import hashlib
+import json
+import os
+from pathlib import Path
+import re
+import subprocess
+import urllib.parse
+
+ROOT = Path(__file__).resolve().parent.parent
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--cache', type=Path, required=True)
+args = parser.parse_args()
+args.cache.mkdir(parents=True, exist_ok=True)
+if not os.environ.get('GH_CONFIG_DIR'):
+    raise SystemExit('Select the authenticated gh profile before fetching.')
+source = json.loads((ROOT / 'profiles/catalog.json').read_text())
+revision = source['revision']
+assert re.fullmatch('[0-9a-f]{40}', revision)
+
+def api(endpoint, body=None):
+    command = ['gh', 'api', endpoint]
+    if body is not None:
+        command += ['--input', '-']
+    result = subprocess.run(command, input=json.dumps(body) if body is not None else None,
+                            text=True, capture_output=True)
+    if result.returncode:
+        raise SystemExit(result.stderr.strip())
+    value = json.loads(result.stdout)
+    if isinstance(value, dict) and value.get('errors'):
+        raise SystemExit(json.dumps(value['errors']))
+    return value
+
+def tree(sha, recursive=False):
+    suffix = '-recursive' if recursive else ''
+    cache = args.cache / (sha + suffix + '.json')
+    if not cache.exists():
+        value = api(f'repos/jaakkopasanen/AutoEq/git/trees/{sha}' + ('?recursive=1' if recursive else ''))
+        cache.write_text(json.dumps(value))
+    return json.loads(cache.read_text())
+
+def walk(sha, prefix):
+    value = tree(sha, True)
+    if not value.get('truncated'):
+        return [dict(row, path=prefix + row['path']) for row in value['tree']
+                if row['type'] == 'blob' and row['path'].endswith('ParametricEQ.txt')]
+    found = []
+    for row in tree(sha)['tree']:
+        if row['type'] == 'tree':
+            found.extend(walk(row['sha'], prefix + row['path'] + '/'))
+    return found
+
+root_tree = tree(revision)
+results_sha = next(row['sha'] for row in root_tree['tree'] if row['path'] == 'results')
+files = []
+for row in tree(results_sha)['tree']:
+    if row['type'] == 'tree':
+        files.extend(walk(row['sha'], 'results/' + row['path'] + '/'))
+print(f'Indexed {len(files)} parametric profiles without truncated trees.', flush=True)
+missing = sorted({row['sha'] for row in files if not (args.cache / (row['sha'] + '.txt')).exists()})
+for start in range(0, len(missing), 100):
+    chunk = missing[start:start+100]
+    selections = ' '.join(f'p{i}: object(oid:"{sha}") {{ ... on Blob {{ text oid isBinary }} }}' for i, sha in enumerate(chunk))
+    response = api('graphql', {'query': 'query { repository(owner:"jaakkopasanen", name:"AutoEq") { ' + selections + ' } }'})['data']['repository']
+    for i, sha in enumerate(chunk):
+        row = response[f'p{i}']
+        if row is None or row['isBinary'] or row['oid'] != sha or row['text'] is None:
+            raise SystemExit('Invalid AutoEq text blob: ' + sha)
+        raw = row['text'].encode()
+        if hashlib.sha1(b'blob ' + str(len(raw)).encode() + b'\0' + raw).hexdigest() != sha:
+            raise SystemExit('AutoEq blob digest mismatch: ' + sha)
+        (args.cache / (sha + '.txt')).write_bytes(raw)
+    print(f'Fetched {min(start+100,len(missing))}/{len(missing)} uncached blobs.', flush=True)
+
+known = {row['path']: row['id'] for row in source['profiles']}
+records, excluded = [], []
+for row in files:
+    text = (args.cache / (row['sha'] + '.txt')).read_text()
+    preamp = re.search(r'Preamp:\s*([\d.+-]+) dB', text)
+    matches = re.findall(r'Filter \d+: ON (\w+) Fc ([\d.]+) Hz Gain ([\d.+-]+) dB Q ([\d.]+)', text)
+    filters = [dict(shape={'PK':'peak', 'LSC':'low_shelf', 'HSC':'high_shelf'}.get(kind, 'unsupported'),
+                    frequency=float(hz), gain_db=float(gain), q=float(q)) for kind,hz,gain,q in matches]
+    if not preamp or not filters or len(filters)>64 or any(f['shape']=='unsupported' or not 10<=f['frequency']<=24000
+            or not -24<=f['gain_db']<=18 or not .1<=f['q']<=12 for f in filters) or not -60<=float(preamp[1])<=0:
+        excluded.append(dict(path=row['path'], reason='parameters outside the supported DSP bounds'))
+        continue
+    parts = row['path'].split('/')
+    identity = known.get(row['path'], 'autoeq-' + hashlib.sha256(row['path'].encode()).hexdigest()[:24])
+    records.append(dict(id=identity, name=parts[-2], category='Headphones',
+        description='Measured correction. Fit, earpads, tips and device effects change the result.',
+        source='AutoEq · ' + parts[1] + ' · ' + parts[2],
+        source_url='https://github.com/jaakkopasanen/AutoEq/blob/' + revision + '/' + urllib.parse.quote(row['path']),
+        preamp_db=float(preamp[1]), filters=filters))
+records.sort(key=lambda row:(row['name'].casefold(),row['source'],row['id']))
+assert len({row['id'] for row in records}) == len(records)
+folder = ROOT / 'profiles/library'
+folder.mkdir(exist_ok=True)
+data=''.join(json.dumps(row,ensure_ascii=False,separators=(',',':'))+'\n' for row in records)
+(folder/'presets.jsonl').write_text(data)
+index=''.join('\t'.join([str(i), row['id'], row['name'].lower(), row['source'].lower()])+'\n' for i,row in enumerate(records))
+(folder/'index.tsv').write_text(index)
+origin=dict(repository='https://github.com/jaakkopasanen/AutoEq', revision=revision, license='MIT',
+    discovered=len(files), supported=len(records), excluded=excluded,
+    sha256=hashlib.sha256(data.encode()).hexdigest(), format='one canonical processing preset per line')
+(folder/'ORIGIN.json').write_text(json.dumps(origin,ensure_ascii=False,indent=2)+'\n')
+print(f'Generated {len(records)} offline profiles; excluded {len(excluded)}; {len(data.encode())} bytes.', flush=True)

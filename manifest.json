@@ -1,13 +1,17 @@
 {
   "id": "app.chilpa.dsp",
   "name": "Chilpa DSP",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "author": "Chilpa",
   "api_version": 1,
   "kind": "dsp",
   "runtime": "wasm",
   "delivers_audio": false,
-  "description": "Offline parametric equalizer, crossfeed, balance, delay and listening presets. DSP changes the signal and breaks strict bit-perfect playback. No library or account access.",
+  "description": "Offline EQ catalog with 8,772 measured headphone profiles and 53 listening presets. The updated Chilpa DSP host provides independent bass/treble, channel EQ, dynamics, a sample-peak limiter and preset management. DSP changes the signal and breaks strict bit-perfect playback. No library or account access.",
   "icon": "adjustmentsHorizontal",
-  "capabilities": [{ "type": "process_audio" }]
+  "capabilities": [
+    {
+      "type": "process_audio"
+    }
+  ]
 }
